@@ -49,6 +49,7 @@
     
 function estimateDelivery(event) {
     event.preventDefault();
+	
     
     let linn = document.getElementById("linn");
     let v1 = document.getElementById("v1");
@@ -78,10 +79,6 @@ if (fname.value.trim() === "") {
         return;
     }
 	
-	 if (!paber.checked && !papp.checked) {
-        alert("Palun valige pakendi eelistus");
-        return;
-    }
 
     //Hinnad ainult linna valides
     let linnaHind = 0;
@@ -97,6 +94,7 @@ if (fname.value.trim() === "") {
             linnaHind = 3;
             break;
     }
+	
 
     // Checkboxidest juurde liidetavad hinnad
     let kokkuHind = linnaHind;
